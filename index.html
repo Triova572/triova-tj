@@ -82,3 +82,93 @@
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conecta Tijuana</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #00ffd5;
+    }
+    .boton {
+      padding: 15px 25px;
+      margin: 10px;
+      background: #00ffd5;
+      color: #111;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    form {
+      background: #222;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 500px;
+      margin: 20px auto;
+      display: none;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Conecta Tijuana</h1>
+  <p>Conecta negocios con proveedores de forma rápida y directa.</p>
+
+  <button class="boton" onclick="mostrarFormulario()">Registrarme como proveedor</button>
+
+  <form id="formulario" onsubmit="enviarFormulario(event)">
+    <h2>Registro de proveedor</h2>
+    <input type="text" name="nombre" placeholder="Nombre del negocio o persona" required>
+    <input type="text" name="contacto" placeholder="WhatsApp o correo de contacto" required>
+    <textarea name="servicio" placeholder="¿Qué ofreces? (Ej: bordado, serigrafía, etc.)" required></textarea>
+    <button class="boton" type="submit">Publicar</button>
+    <p id="mensaje"></p>
+  </form>
+
+  <script>
+    function mostrarFormulario() {
+      document.getElementById('formulario').style.display = 'block';
+    }
+
+    function enviarFormulario(e) {
+      e.preventDefault();
+      const form = e.target;
+      const datos = new FormData(form);
+
+      fetch('https://script.google.com/macros/s/TU_ID_DE_SCRIPT/exec', {
+        method: 'POST',
+        body: datos
+      })
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('mensaje').innerText = "¡Registrado exitosamente!";
+        form.reset();
+      })
+      .catch(err => {
+        document.getElementById('mensaje').innerText = "Error al registrar.";
+        console.error(err);
+      });
+    }
+  </script>
+
+</body>
+</html>
