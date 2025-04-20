@@ -1,1 +1,78 @@
-
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conecta Tijuana</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #00ffd5;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+    .boton {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1rem;
+      background: #00ffd5;
+      border: none;
+      color: #111;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .boton:hover {
+      background: #00c7a5;
+    }
+    .formulario {
+      margin-top: 40px;
+      background: #222;
+      padding: 20px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 400px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .confirmacion {
+      margin-top: 15px;
+      color: #00ffd5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Conecta Tijuana</h1>
+  <p>Unimos a pequeñas empresas con proveedores locales en un solo clic. Súmate gratis y recibe contactos directo por WhatsApp o correo.</p>
+  <button class="boton" onclick="document.querySelector('.formulario').scrollIntoView({ behavior: 'smooth' });">Registrarme como proveedor</button>  <div class="formulario">
+    <h2>Registro rápido</h2>
+    <input type="text" placeholder="Nombre del negocio o servicio" required>
+    <input type="text" placeholder="WhatsApp o correo de contacto" required>
+    <textarea placeholder="¿Qué ofreces? (Ej. bordado, serigrafía, impresión, etc.)" required></textarea>
+    <button class="boton" onclick="enviar()">Publicar</button>
+    <div class="confirmacion" id="mensaje"></div>
+  </div>  <script>
+    function enviar() {
+      document.getElementById('mensaje').innerText = "¡Tu servicio ha sido publicado exitosamente!";
+    }
+  </script></body>
+</html>
