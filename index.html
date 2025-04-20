@@ -1,78 +1,72 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conecta Tijuana</title>
+  <title>Hostinger Horizons</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Inter', sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #111;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      padding: 0;
+      background-color: #ffffff;
+      color: #111;
+    }
+    header {
+      background-color: #f1f1f1;
+      padding: 40px 20px;
       text-align: center;
     }
-    h1 {
-      font-size: 3rem;
-      color: #00ffd5;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-    .boton {
-      margin-top: 20px;
-      padding: 15px 30px;
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    section p {
       font-size: 1rem;
-      background: #00ffd5;
-      border: none;
-      color: #111;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
+      line-height: 1.6;
     }
-    .boton:hover {
-      background: #00c7a5;
-    }
-    .formulario {
-      margin-top: 40px;
-      background: #222;
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
       padding: 20px;
-      border-radius: 15px;
-      width: 100%;
-      max-width: 400px;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-    .confirmacion {
-      margin-top: 15px;
-      color: #00ffd5;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <h1>Conecta Tijuana</h1>
-  <p>Unimos a pequeñas empresas con proveedores locales en un solo clic. Súmate gratis y recibe contactos directo por WhatsApp o correo.</p>
-  <button class="boton" onclick="document.querySelector('.formulario').scrollIntoView({ behavior: 'smooth' });">Registrarme como proveedor</button>  <div class="formulario">
-    <h2>Registro rápido</h2>
-    <input type="text" placeholder="Nombre del negocio o servicio" required>
-    <input type="text" placeholder="WhatsApp o correo de contacto" required>
-    <textarea placeholder="¿Qué ofreces? (Ej. bordado, serigrafía, impresión, etc.)" required></textarea>
-    <button class="boton" onclick="enviar()">Publicar</button>
-    <div class="confirmacion" id="mensaje"></div>
-  </div>  <script>
-    function enviar() {
-      document.getElementById('mensaje').innerText = "¡Tu servicio ha sido publicado exitosamente!";
-    }
-  </script></body>
+  <header>
+    <h1>Bienvenido a Hostinger Horizons</h1>
+  </header>
+
+  <section>
+    <h2>Quiénes somos</h2>
+    <p>Somos una empresa dedicada a brindar soluciones web rápidas, efectivas y adaptadas a las necesidades de nuestros clientes. Ya sea que estés empezando tu negocio o quieras optimizar tu presencia online, estamos aquí para ayudarte.</p>
+  </section>
+
+  <section>
+    <h2>Nuestros servicios</h2>
+    <p>Ofrecemos creación de páginas web, diseño personalizado, mantenimiento, posicionamiento SEO y mucho más.</p>
+  </section>
+
+  <section>
+    <h2>Contáctanos</h2>
+    <p>¿Tienes un proyecto en mente? ¡Hablemos! Puedes escribirnos a contacto@hostingerhorizons.com</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Hostinger Horizons. Todos los derechos reservados.
+  </footer>
+</body>
 </html>
+
+
